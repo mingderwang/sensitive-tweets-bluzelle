@@ -18,5 +18,5 @@ filter:
 
 alert:
   - command
-command: ["ssh", "mini", "/tmp/run.sh", "%(id_str)s",  '"%(text)s"']
+command: ["ssh", "mini", "/scripts/run_save_tweet.sh", "%(id_str)s",  '"%(text)s"']
 #command: ["echo", "%(_source.text)s"]

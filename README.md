@@ -6,3 +6,5 @@ https://snack.expo.io/@mingderwang/sensitive-tweets-bluzelle
 
 # run logstash + Elasticsearch + elastalert to get sensitive tweets on DB
 
+# demo
+[here](https://github.com/mingderwang/sensitive-tweets-bluzelle/tree/master/demo)

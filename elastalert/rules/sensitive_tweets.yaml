@@ -1,0 +1,22 @@
+# From rules/example_frequency.yaml
+name: sensitive tweets
+type: frequency
+index: twitter-*
+num_events: 1
+timeframe:
+    minutes: 1
+
+#- query:
+#    query_string:
+#       query: 'res:failed AND op:login  AND (NOT acct:root) AND (NOT acct:(unknown))'
+
+filter:
+- query:
+    query_string:
+      query: "possibly_sensitive: true"
+
+
+alert:
+  - command
+command: ["ssh", "mini", "/tmp/run.sh", "%(id_str)s",  '"%(text)s"']
+#command: ["echo", "%(_source.text)s"]

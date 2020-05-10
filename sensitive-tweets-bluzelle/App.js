@@ -33,7 +33,7 @@ export default function App() {
       {tweet !== 'undefined' ? (
         <View>
           <Text style={styles.title}>🐤 {tweet}</Text>
-          <Button title="get the last sensible tweet in bluzelle blockchain DB" onPress={onLogout} />
+          <Button title="get the last sensitive tweet in bluzelle blockchain DB" onPress={onLogout} />
           <Text> </Text>
           <Text> @copyright 2020 MINGÐER 🧘‍♀️</Text>
         </View>

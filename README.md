@@ -14,7 +14,6 @@ https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle
 # demo
 [here](https://github.com/mingderwang/sensitive-tweets-bluzelle/tree/master/demo)
 
-# live Android and iOS client demo
+# live Android and iOS demo
 * download and install Expo client (iOS, Android) from [https://expo.io/tools#client](https://expo.io/tools#client)
-* access https://expo.io/@mingderwang/snack-09c7cabc-fd42-4ecc-9cdd-a0cbc6a2d216
-
+* scan QR code to open app from https://expo.io/@mingderwang/snack-09c7cabc-fd42-4ecc-9cdd-a0cbc6a2d216

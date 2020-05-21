@@ -5,7 +5,7 @@ export default function AssetExample() {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        @copyright 2020 MINGÐER 🧘‍♀️
+        copyright ©2020 MINGÐER 🧘‍♀️
       </Text>
       <Image style={styles.logo} source={require('../assets/snack-icon.png')} />
     </View>

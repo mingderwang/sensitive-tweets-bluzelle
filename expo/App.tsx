@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Text, View, StyleSheet, ActivityIndicator, Button} from 'react-native';
+import { Linking, Text, View, StyleSheet, ActivityIndicator, Button} from 'react-native';
 import Constants from 'expo-constants';
 
 // You can import from local files
@@ -12,13 +12,17 @@ import { Card } from 'react-native-paper';
 import { bluzelle } from 'bluzelle/lib/bluzelle-js'
 const config = require('./blz-config.js')
 const gas_params = {'gas_price': '10.0'};
-var res;
+var link;
 
 export default function App() {
   const [tweet, setTweet] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
+  const openlink = useCallback(() => {
+    Linking.openURL(link)
+  },[])
   const play = useCallback(() => {
+    setTweet('undefined')
         bluzelle({
           mnemonic: config.mnemonic,
           endpoint: config.endpoint,
@@ -28,17 +32,16 @@ export default function App() {
           t.count()
           .then(
             (count) => {
-              console.log(count)
               t.getNShortestLeases(count)
               .then((id) => {
-                console.log(id[count-1].key)
-                t.read("1263142909542612994", false)
+                t.read(id[count-1].key, false)
                 .then(
                 (res) => {
-                  console.log(res)
                   let result = (typeof res != 'undefined' ? res : "data retrive fail on read")
-                  alert(result)
-                  setTweet(result)
+                  let ok = result.substr(1,result.length-1)
+                  alert(ok)
+                  setTweet(ok)
+                  link = ok.substr(ok.lastIndexOf("https://t.co"))
                 })
                 .catch(error => { alert(error) });
               })
@@ -51,7 +54,12 @@ export default function App() {
   <View style={styles.container}>
       {tweet !== 'undefined' ? (
         <View>
-          <Text style={styles.title}>🐤 {tweet}</Text>
+          <Text style={styles.title}
+          onPress={
+            openlink
+          }
+          >🐤 {tweet}  👈
+          </Text>
           <Text> </Text>
           <Button title="To get the latest sensitive tweet in bluzelle blockchain DB " onPress={play} />
           <Text> </Text>

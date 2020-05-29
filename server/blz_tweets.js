@@ -1,4 +1,4 @@
-const { bluzelle } = require('../src/main.js');
+const { bluzelle } = require('bluzelle');
 const config = require('./blz-config.js');
 const gas_params = {'gas_price': '10.0'};
 var bz;
@@ -13,7 +13,7 @@ const main = async () => { bz = await bluzelle({
           uuid: "demo-d",
           endpoint: config.endpoint,
           chain_id: config.chain_id
-     }); 
+     });
      try
      {
 //          res = await bz.create("xtest1", "awesome", gas_params);

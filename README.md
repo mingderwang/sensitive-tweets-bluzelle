@@ -12,7 +12,8 @@ https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle
 * now live demo is using bluzelle official testnet
 
 # demo
-[here](https://github.com/mingderwang/sensitive-tweets-bluzelle/tree/master/demo)
+* screenshots [here](https://github.com/mingderwang/sensitive-tweets-bluzelle/tree/master/demo)
+* mobile app demo [youtube](https://youtu.be/-Og8sYlcQ1Q)
 
 # live Android and iOS demo
 * download and install Expo client (iOS, Android) from [https://expo.io/tools#client](https://expo.io/tools#client)

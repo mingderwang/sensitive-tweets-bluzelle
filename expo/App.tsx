@@ -58,7 +58,7 @@ export default function App() {
           onPress={
             openlink
           }
-          >🐤 {tweet}  👈
+          >🐤 {tweet}  👈 (click)
           </Text>
           <Text> </Text>
           <Button title="To get the latest sensitive tweet in bluzelle blockchain DB " onPress={play} />

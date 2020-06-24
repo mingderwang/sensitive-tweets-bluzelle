@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "*sensitive-tweets-bluzelle",
-    "description": "v1.1.0 add link to url",
+    "description": "v1.1.2 fix change testnet endpoint",
     "slug": "snack-09c7cabc-fd42-4ecc-9cdd-a0cbc6a2d216",
     "privacy": "unlisted",
     "sdkVersion": "37.0.0",

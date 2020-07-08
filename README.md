@@ -5,7 +5,7 @@ for bluzelle swarm of duty -> https://gitcoin.co/issue/bluzelle/swarm-of-duty/5/
 * update mobile apps and server for new testnet (chain-id: bluzelleTestPublic-1)
 
 # iOS, Android (EXPO) source code on 
-https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle
+https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle (only for iOS and Android, but not for Web)
 
 # blz server endpoint
 * changed to new testnet endpoint: http://client.sentry.testnet.public.bluzelle.com:1317

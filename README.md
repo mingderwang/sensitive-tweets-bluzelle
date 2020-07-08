@@ -7,6 +7,7 @@ for bluzelle swarm of duty -> https://gitcoin.co/issue/bluzelle/swarm-of-duty/5/
 # iOS, Android (EXPO) source code on 
 https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle
 * lbz server is on testnet http://b.explorer.testnet.public.bluzelle.com:3000/
+* changed to new testnet endpoint: http://client.sentry.testnet.public.bluzelle.com:1317
 
 # run logstash + Elasticsearch + elastalert to get sensitive tweets write to blz DB
 

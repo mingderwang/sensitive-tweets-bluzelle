@@ -2,7 +2,8 @@
 for bluzelle swarm of duty -> https://gitcoin.co/issue/bluzelle/swarm-of-duty/5/4193
 
 # New Release
-* update mobile apps and server for new testnet (chain-id: bluzelleTestPublic-1)
+8/8/2020 - update bluzelle to ^2.0.7 (npm i bluzelle@next)
+* update mobile apps and server for new testnet (chain-id: bluzelleTestNetPublic-5)
 
 # iOS, Android (EXPO) source code on 
 https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle (only for iOS and Android, but not for Web)

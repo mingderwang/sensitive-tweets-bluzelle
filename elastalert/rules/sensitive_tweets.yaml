@@ -13,4 +13,4 @@ filter:
 
 alert:
   - command
-command: ["/home/ming/run.sh", "%(id_str)s",  '%(text)s']
+command: ["/home/ming/server/run.sh", "%(id_str)s",  '%(text)s']

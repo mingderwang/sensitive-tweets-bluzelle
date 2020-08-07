@@ -7,8 +7,8 @@ for (let j = 0; j < process.argv.length; j++) {
     console.log(j + ' -> ' + (process.argv[j]));
 }
 
-const main = async () => { bz = await bluzelle({
-          address: config.address,
+const main = async () => {
+     const bz = await bluzelle({
           mnemonic: config.mnemonic,
           uuid: "demo-d",
           endpoint: config.endpoint,
@@ -16,17 +16,13 @@ const main = async () => { bz = await bluzelle({
      });
      try
      {
-//          res = await bz.create("xtest1", "awesome", gas_params);
- //         console.log(typeof res != 'undefined' ? res : "success");
 
-await bz.create(process.argv[2]?process.argv[2]:"same_id", (process.argv[3]?process.argv[3]:"empty parm in command line"), gas_params);
+          await bz.create(process.argv[2]?process.argv[2]:"same_id", (process.argv[3]?process.argv[3]:"empty parm in command line"), gas_params);
 
-          res = await bz.read(process.argv[2]?process.argv[2]:"same_id", false);
+          res = await bz.txRead(process.argv[2]?process.argv[2]:"same_id", gas_params);
           console.log(typeof res != 'undefined' ? res : "success");
 console.log(process.argv[2]?process.argv[2]:"same_id")
 
-//const hasMyKey = await bz.has('mykey');
-//console.log(hasMyKey)
      } catch(e)
      {
           console.log(e)

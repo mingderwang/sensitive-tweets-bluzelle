@@ -66,6 +66,7 @@ export default function App() {
           <Text>Need at least 2 BNT in bluzelle1phue773lhlk9e83kk8zgtspvsvmytl63p0rd50 address on Bluzelle TestNet</Text>
           <Text></Text>
           <Text>copyright ©2020 MINGÐER 🧘‍♀️</Text>
+          <Text>chain-id: bluzelleTestPublic-1</Text>
         </View>
       ) : (
     <View style={styles.container}>

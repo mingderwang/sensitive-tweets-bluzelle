@@ -1,9 +1,14 @@
 # sensitive-tweets-bluzelle
 for bluzelle swarm of duty -> https://gitcoin.co/issue/bluzelle/swarm-of-duty/5/4193
 
+# New Release
+* update mobile apps and server for new testnet (chain-id: bluzelleTestPublic-1)
+
 # iOS, Android (EXPO) source code on 
-https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle
-* lbz server is on testnet http://b.explorer.testnet.public.bluzelle.com:3000/
+https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle (only for iOS and Android, but not for Web)
+
+# blz server endpoint
+* changed to new testnet endpoint: http://client.sentry.testnet.public.bluzelle.com:1317
 
 # run logstash + Elasticsearch + elastalert to get sensitive tweets write to blz DB
 
@@ -17,4 +22,4 @@ https://snack.expo.io/@mingderwang/*sensitive-tweets-bluzelle
 
 # live Android and iOS demo
 * download and install Expo client (iOS, Android) from [https://expo.io/tools#client](https://expo.io/tools#client)
-* scan QR code to open app from https://expo.io/@mingderwang/snack-09c7cabc-fd42-4ecc-9cdd-a0cbc6a2d216
+* scan QR code to open app from * https://expo.io/@mingderwang/snack-09c7cabc-fd42-4ecc-9cdd-a0cbc6a2d216

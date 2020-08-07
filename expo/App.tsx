@@ -22,19 +22,14 @@ export default function App() {
     Linking.openURL(link)
   },[])
   const play = useCallback(() => {
-    setTweet('undefined')
-        bluzelle({
-          mnemonic: config.mnemonic,
-          endpoint: config.endpoint,
-          uuid: "demo-d",
-          chain_id: config.chain_id
-        }).then((t) => {
-          t.count()
+    setTweet('undefined');
+    const t = bluzelle(config);
+        t.count()
           .then(
             (count) => {
-              t.getNShortestLeases(count)
+              t.getNShortestLeases(count, gas_params)
               .then((id) => {
-                t.read(id[count-1].key, false)
+                t.read(id[count-1].key, gas_params)
                 .then(
                 (res) => {
                   let result = (typeof res != 'undefined' ? res : "data retrive fail on read")
@@ -46,7 +41,7 @@ export default function App() {
                 .catch(error => { alert(error) });
               })
               .catch(error => { alert(error) });
-            })
+          
         }).catch(error => { alert(error) });
   },[]);
   
@@ -63,10 +58,8 @@ export default function App() {
           <Text> </Text>
           <Button title="To get the latest sensitive tweet in bluzelle blockchain DB " onPress={play} />
           <Text> </Text>
-          <Text>Need at least 2 BNT in bluzelle1phue773lhlk9e83kk8zgtspvsvmytl63p0rd50 address on Bluzelle TestNet</Text>
-          <Text></Text>
           <Text>copyright ©2020 MINGÐER 🧘‍♀️</Text>
-          <Text>chain-id: bluzelleTestPublic-1</Text>
+          <Text>chain-id: bluzelleTestNetPublic-5</Text>
         </View>
       ) : (
     <View style={styles.container}>

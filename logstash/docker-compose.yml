@@ -1,0 +1,76 @@
+version: "3"
+
+services:
+  #############################
+  # ELASTICSEARCH MASTER NODE #
+  #############################
+  master:
+    restart: unless-stopped
+    image: blacktop/elasticsearch:7.6.2
+    environment:
+      - bootstrap.memory_lock=true
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
+      - cluster.name=docker-cluster
+      - node.master=true
+      - node.ingest=true
+      - node.data=true
+      - discovery.type=single-node
+      - path.repo=/mount/backups
+    volumes:
+      - /data/container/master:/usr/share/elasticsearch/data
+      - /data/container/mount:/mount:rw
+      - /mount/backups:/mount/backups:rw
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks:
+      - elastic
+    ports:
+      - "9200:9200"
+
+  logstash:
+    restart: unless-stopped
+    image: docker.elastic.co/logstash/logstash:7.6.2
+    environment:
+      - pipeline.workers=1
+    volumes:
+    - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    networks:
+      - elastic
+    depends_on:
+      - master
+    links:
+      - master:elastic-master
+  ###############
+  # KIBANA NODE #
+  ###############
+  kibana:
+    restart: unless-stopped
+    image: blacktop/kibana:7.6.2
+    ports:
+      - "5601:5601"
+    expose:
+      - "5601"
+    networks:
+      - elastic
+    environment:
+      - elasticsearch.hosts="http://master:9200/"
+      - elasticsearch.username="change_me"
+      - elasticsearch.password="change_me"
+        #links:
+        #- ingest:elastic-ingest
+    links:
+      - master:elastic-master
+
+#############################
+# ELASTICSEARCH DATA VOLUME #
+#############################
+volumes:
+  data:
+################################
+# ELASTICSEARCH BRIDGE NETWORK #
+################################
+networks:
+  elastic:
+    driver: bridge

@@ -1,3 +1,4 @@
+
 name: sensitive tweets
 type: frequency
 index: twitter-*
@@ -12,4 +13,4 @@ filter:
 
 alert:
   - command
-command: ["/home/ming/sensitive-tweets-bluzelle/server/run.sh", "%(id_str)s",  '%(text)s']
+command: ["/Users/mingderwang/2020/HACK_HERE/sensitive-tweets-bluzelle/server/run.sh", "%(id_str)s",  '%(text)s']

@@ -64,7 +64,7 @@ export default function App() {
           <Text> </Text>
           <Text>copyright ©2020 MINGÐER 🧘‍♀️</Text>
           <Text>chain-id: bluzelleTestNetPublic-5</Text>
-          <Text>v1.0.0</Text>
+          <Text>v2.0.0</Text>
         </View>
       ) : (
     <View style={styles.container}>

@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 
-export default function AssetExample() {
+export default function LogoView() {
   return (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-        copyright ©2020 MINGÐER 🧘‍♀️
+        copyright of Logo ©2020 Bluzelle
       </Text>
-      <Image style={styles.logo} source={require('../assets/snack-icon.png')} />
+      <Image style={styles.logo} source={require('../assets/Bluzelle_Logo.png')} />
     </View>
   );
 }

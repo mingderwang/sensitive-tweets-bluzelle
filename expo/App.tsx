@@ -3,7 +3,7 @@ import { Linking, Text, View, StyleSheet, ActivityIndicator, Button} from 'react
 import Constants from 'expo-constants';
 
 // You can import from local files
-import AssetExample from './components/AssetExample';
+import LogoView from './components/LogoView';
 
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
@@ -38,7 +38,6 @@ export default function App() {
                 (res) => {
                   let result = (typeof res != 'undefined' ? res : "data retrive fail on read")
                   let ok = result.substr(0,result.length)
-                  alert(ok)
                   setTweet(ok)
                   link = ok.substr(ok.lastIndexOf("https://t.co"))
                   link = JSON.stringify(link).replace( /\\n/gi , ' ');
@@ -66,7 +65,7 @@ export default function App() {
           >🐤 {tweet}  👈 (click)
           </Text>
           <Text> </Text>
-          <Button title="To get the latest sensitive tweet in bluzelle blockchain DB " onPress={play} />
+          <Button title="To get the latest sensitive tweet in Bluzelle blockchain DB " onPress={play} />
           <Text> </Text>
           <Text>copyright ©2020 MINGÐER 🧘‍♀️</Text>
           <Text>chain-id: bluzelleTestNetPublic-5</Text>
@@ -75,10 +74,10 @@ export default function App() {
       ) : (
     <View style={styles.container}>
       <Text style={styles.paragraph}>
-      Sensitive Tweets are stored on bluzelle TestNet DB: demo-d
+      Sensitive Tweets are stored on Bluzelle DB: demo-d
       </Text>
       <Card>
-        <AssetExample />
+        <LogoView/>
       </Card>
     </View>
       )}

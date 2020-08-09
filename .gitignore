@@ -2,3 +2,4 @@ blz/.blzd/data
 expo/node_modules
 expo/.expo
 server/node_modules
+server/blz_tweets

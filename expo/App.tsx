@@ -9,7 +9,7 @@ import AssetExample from './components/AssetExample';
 import { Card } from 'react-native-paper';
 
 // bluzelle
-import { bluzelle } from 'bluzelle/lib/bluzelle-js'
+import { bluzelle } from "bluzelle/lib/bluzelle-js";
 const config = require('./blz-config.js')
 const gas_params = {'gas_price': '10.0'};
 var link;
@@ -90,4 +90,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
-     
+      

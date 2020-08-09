@@ -37,6 +37,10 @@ export default function App() {
                   alert(ok)
                   setTweet(ok)
                   link = ok.substr(ok.lastIndexOf("https://t.co"))
+                  link = JSON.stringify(link).replace( /\\n/gi , ' ');
+                  if (link.includes(' ')) {
+                     link=link.substr(1, link.indexOf(' ') - 1)
+                  }
                 })
                 .catch(error => { alert(error) });
               })

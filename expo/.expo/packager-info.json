@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 83124,
+  "expoServerNgrokUrl": "https://59-2wm.mingderwang.expo.exp.direct",
+  "packagerNgrokUrl": "https://packager.59-2wm.mingderwang.expo.exp.direct",
+  "ngrokPid": 83150,
   "webpackServerPort": null
 }

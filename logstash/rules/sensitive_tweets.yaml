@@ -12,4 +12,4 @@ filter:
 
 alert:
   - command
-command: ["/home/ming/sensitive-tweets-bluzelle/server/run.sh", "%(id_str)s",  '%(text)s']
+command: ["/var/www/my-app/blz_tweets", "%(id_str)s",  '%(text)s']

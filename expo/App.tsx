@@ -19,7 +19,11 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const openlink = useCallback(() => {
-    Linking.openURL(link)
+    if (link.includes('https://t.co')) {
+      Linking.openURL(link)
+    } else {
+      alert("sorry, no link")
+    }
   },[])
   const play = useCallback(() => {
     setTweet('undefined');
@@ -33,13 +37,15 @@ export default function App() {
                 .then(
                 (res) => {
                   let result = (typeof res != 'undefined' ? res : "data retrive fail on read")
-                  let ok = result.substr(1,result.length-1)
+                  let ok = result.substr(0,result.length)
                   alert(ok)
                   setTweet(ok)
                   link = ok.substr(ok.lastIndexOf("https://t.co"))
                   link = JSON.stringify(link).replace( /\\n/gi , ' ');
                   if (link.includes(' ')) {
-                     link=link.substr(1, link.indexOf(' ') - 1)
+                    link=link.substr(1, link.indexOf(' ') - 1)
+                  } else {
+                    link=link.substr(1, link.length - 2)
                   }
                 })
                 .catch(error => { alert(error) });
@@ -64,7 +70,7 @@ export default function App() {
           <Text> </Text>
           <Text>copyright ©2020 MINGÐER 🧘‍♀️</Text>
           <Text>chain-id: bluzelleTestNetPublic-5</Text>
-          <Text>v2.0.0</Text>
+          <Text>v2.0.1</Text>
         </View>
       ) : (
     <View style={styles.container}>

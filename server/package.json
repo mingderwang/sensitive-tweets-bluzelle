@@ -6,7 +6,7 @@
   "dependencies": {
     "bluzelle": "^2.0.7"
   },
- "scripts": {
-    "test": 'run.sh "foo" "bar"'
+  "scripts": {
+    "test": "run.sh"
   }
 }

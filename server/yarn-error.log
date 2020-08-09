@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/mingderwang/2020/HACK_HERE/sensitive-tweets-bluzelle/server/package.json: Unexpected token ' in JSON at position 162
+  SyntaxError: /Users/mingderwang/2020/HACK_HERE/sensitive-tweets-bluzelle/server/package.json: Unexpected token ' in JSON at position 163
       at JSON.parse (<anonymous>)
       at /Users/mingderwang/.yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -30,7 +30,7 @@ npm manifest:
     "dependencies": {
       "bluzelle": "^2.0.7"
     },
-   "scripts": {
+    "scripts": {
       "test": 'run.sh "foo" "bar"'
     }
   }

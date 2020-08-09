@@ -3,6 +3,8 @@ version: "3"
 services:
   elastalert:
     restart: unless-stopped
+    depends_on:
+      - master
     links:
       - master:elastic-master
     image: khezen/elastalert
@@ -10,7 +12,7 @@ services:
       ELASTICSEARCH_HOST: master
       ELASTICSEARCH_PORT: 9200
     volumes:
-      - /etc/elastalert:/etc/elastalert
+      - ./elastalert:/etc/elastalert
       - ./rules:/usr/share/elastalert/rules
     networks:
       - elastic

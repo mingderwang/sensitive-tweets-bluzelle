@@ -1,4 +1,4 @@
-FROM mingder78/elastalert:v3.0.2
+FROM mingder78/elastalert:v3.0.4
 # v3.0.0 already install node v14
 #FROM khezen/elastalert
 #FROM debian:jessie

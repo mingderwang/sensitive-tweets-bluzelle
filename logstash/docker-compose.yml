@@ -2,13 +2,14 @@ version: "3"
 
 services:
   elastalert:
-#    restart: unless-stopped
+    restart: unless-stopped
     depends_on:
       - master
     links:
       - master:elastic-master
     build:
       context: ./server
+    command: "elastalert --config /etc/elastalert/elastalert.yml --verbose"
     environment:
       ELASTICSEARCH_HOST: master
       ELASTICSEARCH_PORT: 9200

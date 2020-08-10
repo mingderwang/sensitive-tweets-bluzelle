@@ -1,5 +1,5 @@
-FROM mingder78/elastalert:v3.0.2
-# v3.0.0 already install node v14
+FROM mingder78/elastalert:v3.0.4
+# v3.0.4 already install node v14 and elastalert v0.2.4, create indices then stop
 #FROM khezen/elastalert
 #FROM debian:jessie
 

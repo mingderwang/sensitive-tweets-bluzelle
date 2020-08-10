@@ -1,4 +1,4 @@
-FROM mingder78/elastalert:v1.0.2
+FROM mingder78/elastalert:v2.0.0
 #FROM khezen/elastalert
 #FROM debian:jessie
 

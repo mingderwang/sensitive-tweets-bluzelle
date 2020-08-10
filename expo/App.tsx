@@ -8,7 +8,7 @@ import LogoView from './components/LogoView';
 // or any pure javascript modules available in npm
 import { Card } from 'react-native-paper';
 
-// bluzelle
+// bluzelle (in expo only)
 import { bluzelle } from "bluzelle/lib/bluzelle-js";
 const config = require('./blz-config.js')
 const gas_params = {'gas_price': '10.0'};
@@ -39,7 +39,7 @@ export default function App() {
                   let result = (typeof res != 'undefined' ? res : "data retrive fail on read")
                   let ok = result.substr(0,result.length)
                   setTweet(ok)
-                  link = ok.substr(ok.lastIndexOf("https://t.co"))
+                  link = ok.substr(ok.indexOf("https://t.co"))
                   link = JSON.stringify(link).replace( /\\n/gi , ' ');
                   if (link.includes(' ')) {
                     link=link.substr(1, link.indexOf(' ') - 1)

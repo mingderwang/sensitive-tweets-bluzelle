@@ -1,11 +1,7 @@
-FROM mingder78/elastalert:v2.0.0
+FROM mingder78/elastalert:v3.0.0
+# v3.0.0 already install node v14
 #FROM khezen/elastalert
 #FROM debian:jessie
-
-RUN apt-get update -y
-RUN apt-get install -y build-essential curl
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
 
 RUN mkdir -p /var/www/my-app
 COPY ./my-app /var/www/my-app
